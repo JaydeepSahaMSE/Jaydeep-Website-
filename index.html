@@ -1,0 +1,1000 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="description" content="Jaydeep Saha, Assistant Professor, Metallurgy and Materials Engineering, COEP Technological University, Pune. MARS Lab: Thermo-mechanical Processing, High-Entropy Alloys, Additive Manufacturing and lattice structures.">
+<style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#faf9f5;color:#141413}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style>
+<title>Jaydeep Saha</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,500..800&family=Figtree:ital,wght@0,400;0,500;0,600;1,400&display=swap">
+<style>
+/* Layout: hash-routed pages under one sticky nav; each page is an editorial column with a left label rail; Home pairs the intro with a live EBSD-style recrystallization map. */
+:root{
+  --bg:#d8f0eb; --surface:#ffffff; --fg:#14262a; --muted:#4a6166; --line:#b9dcd5;
+  --accent:#b8321f; --matrix-a:#bcd9d3; --matrix-b:#a8cbc4;
+  --glow:rgba(240,130,60,.20); --glow2:rgba(20,140,130,.18); --tex:.55;
+  color-scheme:light;
+  --display:"Archivo","Helvetica Neue",Arial,sans-serif;
+  --body:"Figtree","Segoe UI",system-ui,sans-serif;
+  --label:"Figtree","Segoe UI",system-ui,sans-serif;
+}
+/* single light theme (soft aqua) on every device */
+
+*{box-sizing:border-box}
+body{background:radial-gradient(1100px 620px at 105% -8%,var(--glow),transparent 62%),radial-gradient(900px 620px at -12% 108%,var(--glow2),transparent 60%),var(--bg);background-attachment:fixed;color:var(--fg);font-family:var(--body);font-size:17px;line-height:1.65;padding-inline:clamp(16px,4vw,40px);padding-block:0 48px}
+.wrap{max-width:1040px;margin-inline:auto}
+a{color:inherit;text-decoration-color:var(--accent);text-underline-offset:3px}
+a:hover{color:var(--accent)}
+a:focus-visible,button:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:2px}
+
+/* nav */
+.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:color-mix(in srgb,var(--bg) 82%,transparent);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);margin-inline:calc(-1 * clamp(16px,4vw,40px));padding-inline:clamp(16px,4vw,40px);border-bottom:1px solid var(--line)}
+nav{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:10px 24px;padding-block:18px}
+.mark{font-family:var(--display);font-weight:700;font-size:1.05rem;text-decoration:none;letter-spacing:-.01em;display:flex;align-items:baseline;gap:10px;flex-wrap:wrap}
+.lab{font-family:var(--label);font-weight:500;font-size:.7rem;letter-spacing:.1em;text-transform:uppercase;color:var(--accent);border:1px solid currentColor;padding:1px 7px}
+.labtag{display:inline-block;font-family:var(--display);font-weight:700;font-size:1.1rem;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);border:2px solid currentColor;padding:3px 12px;margin:0 0 18px}
+.hero h1{font-size:clamp(2.3rem,5.4vw,3.9rem)}
+.tagline{font-family:var(--display);font-weight:500;font-size:1.3rem;line-height:1.3;letter-spacing:-.01em;margin:0 0 14px;max-width:32ch}
+nav ul{display:flex;flex-wrap:wrap;gap:4px 20px;list-style:none;margin:0;padding:0;font-family:var(--label);font-size:.76rem;text-transform:uppercase;letter-spacing:.08em}
+nav ul a{text-decoration:none;color:var(--muted);padding-block:4px;border-bottom:2px solid transparent}
+nav ul a:hover{color:var(--fg)}
+nav ul a[aria-current="page"]{color:var(--fg);border-bottom-color:var(--accent)}
+
+/* page heads */
+.page-head{padding-block:clamp(40px,6vw,72px) clamp(20px,3vw,32px)}
+.eyebrow{font-family:var(--label);font-size:.76rem;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin:0 0 16px}
+.page-head h1{font-size:clamp(2.2rem,5vw,3.4rem)}
+.page-head .lede{max-width:52ch}
+h1{font-family:var(--display);font-weight:800;font-stretch:88%;font-size:clamp(2.6rem,6.4vw,4.6rem);line-height:1;letter-spacing:-.02em;margin:0 0 20px;text-wrap:balance}
+h1 em{font-style:normal;color:var(--accent)}
+.lede{font-size:1.2rem;max-width:34ch;margin:0 0 28px}
+
+/* hero */
+.hero{display:grid;grid-template-columns:1.1fr .9fr;gap:clamp(28px,5vw,64px);align-items:center;padding-block:clamp(40px,7vw,88px)}
+.hero>*{min-width:0}
+.actions{display:flex;flex-wrap:wrap;gap:12px}
+.btn{font-family:var(--label);font-size:.82rem;letter-spacing:.04em;padding:11px 18px;border:1px solid var(--fg);text-decoration:none;background:var(--fg);color:var(--bg)}
+.btn:hover{background:var(--accent);border-color:var(--accent);color:var(--bg)}
+.btn.ghost{background:transparent;color:var(--fg)}
+.btn.ghost:hover{color:var(--bg)}
+figure{margin:0}
+.map{border:1px solid var(--line);background:var(--surface);padding:10px}
+canvas{display:block;width:100%;aspect-ratio:4/3;image-rendering:pixelated;max-width:100%}
+figcaption{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;font-family:var(--label);font-size:.72rem;color:var(--muted);padding-top:10px;font-variant-numeric:tabular-nums}
+figcaption b{color:var(--fg);font-weight:500}
+.replay{font:inherit;color:var(--muted);background:none;border:0;padding:0;cursor:pointer;text-decoration:underline;text-underline-offset:3px}
+.replay:hover{color:var(--accent)}
+
+/* sections */
+section{display:grid;grid-template-columns:180px 1fr;gap:12px 40px;padding-block:clamp(36px,5vw,56px);border-top:1px solid var(--line)}
+section>*{min-width:0}
+h2{font-family:var(--label);font-weight:500;font-size:.8rem;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin:6px 0 0}
+.body{max-width:66ch}
+.body p{margin:0 0 1em}
+h3{font-family:var(--display);font-weight:500;font-size:1.3rem;letter-spacing:-.015em;line-height:1.2;margin:0 0 6px;text-wrap:balance}
+
+.grid2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:30px 36px;list-style:none;margin:0;padding:0}
+.grid3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px 28px;list-style:none;margin:0;padding:0}
+.grid2 li,.grid3 li{border-top:2px solid var(--fg);padding-top:14px}
+.grid2 p,.grid3 p{margin:0;color:var(--muted);font-size:1rem}
+.tag{font-family:var(--label);font-size:.7rem;letter-spacing:.06em;color:var(--accent);display:block;margin-bottom:8px;text-transform:uppercase}
+a.tile{text-decoration:none;display:block}
+a.tile:hover h3{color:var(--accent)}
+.arrow{font-family:var(--label);font-size:.78rem;color:var(--muted);display:inline-block;margin-top:10px}
+.focus li{background:var(--surface);border:1px solid var(--line);border-top:3px solid var(--fg);padding:18px 18px 20px;transition:border-color .2s}
+.focus li:hover{border-top-color:var(--accent)}
+.focus li.more{background:transparent;border-style:dashed;border-top:3px solid var(--accent)}
+.focus li.more p{line-height:2;font-family:var(--label);font-size:.82rem}
+.focus li.more a{text-decoration:none;color:var(--fg)}
+.focus li.more a:hover{color:var(--accent)}
+@media (prefers-reduced-motion:reduce){.focus li{transition:none}}
+/* MARS title: words rise in, initials glow, abbreviation letters drop in */
+.mars-title .w{display:inline-block;opacity:0;transform:translateY(.35em);animation:marsRise .6s cubic-bezier(.2,.7,.2,1) forwards;animation-delay:calc(var(--i)*.12s)}
+.mars-title .w em{display:inline-block;animation:marsGlow 1s ease-out forwards;animation-delay:calc(.8s + var(--i)*.12s)}
+.mars-title .abbr{display:inline-block;white-space:nowrap;color:var(--accent);font-stretch:100%;letter-spacing:.06em;font-size:.62em;vertical-align:.18em}
+.mars-title .abbr span{display:inline-block;opacity:0;transform:translateY(-.6em);animation:marsDrop .45s cubic-bezier(.3,1.5,.5,1) forwards;animation-delay:calc(1.3s + var(--i)*.11s)}
+@keyframes marsRise{to{opacity:1;transform:none}}
+@keyframes marsDrop{to{opacity:1;transform:none}}
+@keyframes marsGlow{0%{transform:scale(1)}40%{transform:scale(1.18)}100%{transform:scale(1)}}
+@media (prefers-reduced-motion:reduce){.mars-title .w,.mars-title .w em,.mars-title .abbr span{animation:none;opacity:1;transform:none}}
+.gallery{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:20px;list-style:none;margin:0;padding:0}
+.gallery li{grid-column:span 2;min-width:0}
+.gallery li.wide{grid-column:span 3}
+.gallery figure{margin:0;border:1px solid var(--line);background:var(--surface);height:100%;display:flex;flex-direction:column}
+.gallery svg{display:block;width:100%;height:auto;max-width:100%;background:var(--bg);border-bottom:1px solid var(--line)}
+.gallery figcaption{display:block;padding:14px 16px 16px;font-family:var(--display);font-weight:500;font-size:1.05rem;color:var(--fg);letter-spacing:-.01em;line-height:1.25}
+.gallery figcaption .tag{display:inline;margin-right:8px}
+.gallery small{display:block;font-family:var(--body);font-weight:400;font-size:.9rem;color:var(--muted);margin-top:6px;letter-spacing:0;line-height:1.45}
+.gnote{font-family:var(--body);font-style:italic;font-size:.85rem;color:var(--muted);margin:14px 0 0}
+.st{stroke:var(--fg);stroke-width:1.4}
+.thin{stroke:var(--muted);stroke-width:1;fill:none}
+.fill-s{fill:var(--surface)} .fill-m{fill:var(--matrix-a)}
+.acc-f{fill:var(--accent)} .acc-s{stroke:var(--accent);stroke-width:2} .acc-t{fill:var(--accent)}
+.dash{stroke-dasharray:4 4}
+.bub{fill:var(--matrix-a);stroke:var(--muted);stroke-width:1}
+.lbl{font-family:var(--label);font-size:11px;font-weight:500;fill:var(--fg)}
+.pool{fill:var(--accent);opacity:.85}
+.beam{stroke-width:3}
+.track{fill:var(--matrix-b);stroke:var(--muted);stroke-width:.8}
+.strut{stroke:var(--fg);stroke-width:2.2;stroke-linecap:round}
+.strut.back{stroke:var(--muted);stroke-width:1.4}
+.node{fill:var(--accent)}
+@media (max-width:760px){.gallery{grid-template-columns:1fr}.gallery li,.gallery li.wide{grid-column:auto}}
+
+.list{list-style:none;margin:0;padding:0}
+.list li{display:grid;grid-template-columns:130px 1fr;gap:4px 24px;padding-block:16px;border-bottom:1px solid var(--line)}
+.list li:first-child{padding-top:0}
+.list li:last-child{border-bottom:0}
+.list .k{font-family:var(--label);font-size:.74rem;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);padding-top:5px;font-variant-numeric:tabular-nums}
+.list p{margin:0;color:var(--muted);font-size:1rem}
+.list p.thesis{margin-top:6px;color:var(--fg);font-style:italic}
+.list p.thesis span{font-style:normal;font-family:var(--label);font-size:.7rem;letter-spacing:.06em;text-transform:uppercase;color:var(--accent);margin-right:8px}
+
+.status{display:inline-block;font-family:var(--label);font-size:.68rem;letter-spacing:.05em;text-transform:uppercase;padding:2px 8px;border:1px solid var(--line);color:var(--muted);margin-left:6px;vertical-align:2px}
+.note{border:1px dashed var(--line);background:var(--surface);padding:18px 20px;font-size:1rem;color:var(--muted)}
+.note strong{color:var(--fg);font-weight:600}
+
+/* people */
+.pi{display:grid;grid-template-columns:140px 1fr;gap:24px;align-items:start}
+.pi>*{min-width:0}
+.avatar{width:140px;max-width:100%;aspect-ratio:1;background:var(--surface);border:1px solid var(--line);display:grid;place-items:center;font-family:var(--display);font-weight:700;font-size:2.6rem;color:var(--muted);letter-spacing:-.03em}
+.role{font-family:var(--label);font-size:.74rem;letter-spacing:.06em;text-transform:uppercase;color:var(--accent);margin:0 0 6px}
+.avatar.photo{object-fit:cover;padding:0;display:block;height:auto;border-radius:50%;border:3px solid var(--surface);box-shadow:0 0 0 2px var(--accent)}
+.slot .avatar{width:64px;font-size:1.1rem;margin-bottom:12px}
+
+/* contact */
+.contact{display:flex;flex-wrap:wrap;gap:10px 14px;align-items:center;margin-top:8px}
+.addr{font-family:var(--label);font-size:.95rem;user-select:all;background:var(--surface);border:1px solid var(--line);padding:9px 14px;overflow-wrap:anywhere}
+.copy{font-family:var(--label);font-size:.78rem;padding:9px 14px;border:1px solid var(--line);background:transparent;color:var(--fg);cursor:pointer}
+.copy:hover{border-color:var(--accent);color:var(--accent)}
+.emails{display:flex;flex-direction:column;gap:12px;min-width:0}
+.emails .contact{margin-top:0}
+.etag{font-family:var(--label);font-size:.7rem;letter-spacing:.08em;text-transform:uppercase;color:var(--accent);min-width:72px}
+.links{display:flex;flex-wrap:wrap;gap:8px 22px;font-family:var(--label);font-size:.85rem}
+
+footer{border-top:1px solid var(--line);padding-top:22px;margin-top:8px;font-family:var(--label);font-size:.72rem;color:var(--muted);display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px}
+
+@media (max-width:860px){.grid3{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:760px){
+  body{font-size:17px}
+  .hero,section,.grid2,.list li{grid-template-columns:1fr}
+  .grid3{grid-template-columns:1fr}
+  .pi{grid-template-columns:1fr}
+  .avatar{width:110px}
+}
+.pubs{list-style:none;margin:0;padding:0;counter-reset:pub 8}
+.pubs li{display:grid;grid-template-columns:44px 1fr;column-gap:16px;padding-block:16px;border-bottom:1px solid var(--line);counter-increment:pub -1}
+.pubs li:first-child{padding-top:0}.pubs li:last-child{border-bottom:0}
+.pubs li::before{content:counter(pub);grid-row:1 / span 3;font-family:var(--display);font-weight:700;font-size:1.3rem;color:var(--accent);font-variant-numeric:tabular-nums;line-height:1.4}
+.pubs.plain li{counter-increment:none}.pubs.plain li::before{content:"";}
+.pubs li>*{grid-column:2;min-width:0}
+.pubs .au{margin:0 0 4px;font-size:.92rem;color:var(--muted)}
+.pubs .me{color:var(--fg);font-weight:600}
+.pubs h3{font-size:1.12rem;margin:0 0 4px}
+.pubs .venue{margin:0;font-size:.95rem;color:var(--muted);overflow-wrap:anywhere}
+.pubs .venue a{color:var(--fg)}
+@media (max-width:520px){.pubs li{grid-template-columns:30px 1fr;column-gap:10px}}
+.body p.svc-h{margin:0 0 6px}
+.svc{list-style:none;margin:0 0 1.4em;padding:0}
+.svc li{position:relative;padding:6px 0 6px 18px;border-bottom:1px solid var(--line);font-size:1rem;color:var(--muted)}
+.svc li:last-child{border-bottom:0}
+.svc li::before{content:"";position:absolute;left:0;top:1.05em;width:7px;height:7px;background:var(--accent)}
+/* group: B.Tech. cohort */
+.cohort{display:flex;flex-direction:column;gap:22px}
+.cohort-head{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-end;gap:16px 32px;padding-bottom:18px;border-bottom:2px solid var(--fg)}
+.cohort-head h3{font-size:1.7rem;font-weight:700;margin:0 0 6px}
+.cohort-sub{margin:0;color:var(--muted);font-size:1rem;max-width:44ch}
+.stats{display:flex;gap:22px;list-style:none;margin:0;padding:0}
+.stats li{display:flex;flex-direction:column;align-items:flex-start;line-height:1}
+.stats b{font-family:var(--display);font-weight:800;font-size:2.3rem;color:var(--accent);font-variant-numeric:tabular-nums}
+.stats span{font-family:var(--label);font-size:.7rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-top:6px}
+.teams{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}
+.team{background:var(--surface);border:1px solid var(--line);border-top:3px solid var(--accent);padding:18px 18px 8px;min-width:0}
+.team-head{display:flex;align-items:center;gap:12px;margin-bottom:10px}
+.gid{font-family:var(--display);font-weight:800;font-size:1rem;color:var(--bg);background:var(--fg);padding:6px 9px;letter-spacing:.02em;line-height:1}
+.team-head h4{font-family:var(--display);font-weight:600;font-size:1.1rem;margin:0;line-height:1.2}
+.since{font-family:var(--label);font-size:.72rem;letter-spacing:.05em;text-transform:uppercase;color:var(--muted)}
+.members{list-style:none;margin:0;padding:0}
+.members li{display:flex;align-items:center;gap:12px;padding:10px 0;border-top:1px solid var(--line)}
+.members li>div{min-width:0;display:flex;flex-direction:column;line-height:1.3}
+.members b{font-weight:600;font-size:1rem;color:var(--fg);overflow-wrap:anywhere}
+.members li>div span{font-size:.82rem;color:var(--muted)}
+.ini{flex:none;width:42px;height:42px;border-radius:50%;display:grid;place-items:center;font-family:var(--display);font-weight:700;font-size:.9rem;letter-spacing:.02em;color:var(--accent);background:var(--bg);border:1.5px solid var(--accent);transition:background .2s,color .2s}
+.members li:hover .ini{background:var(--accent);color:var(--surface)}
+.projs-label{margin:6px 0 -8px}
+.projs{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+.projs li{display:flex;gap:14px;align-items:flex-start;padding:14px 16px;border:1px solid var(--line);background:var(--surface);min-width:0}
+.projs li>div{min-width:0}
+.pn{font-family:var(--display);font-weight:800;font-size:1.4rem;line-height:1;color:var(--accent);font-variant-numeric:tabular-nums}
+.projs h4{font-family:var(--display);font-weight:600;font-size:1.02rem;line-height:1.25;margin:0 0 6px;text-wrap:balance}
+.mat{display:inline-block;font-family:var(--label);font-size:.72rem;letter-spacing:.04em;padding:2px 8px;border:1px solid var(--line);color:var(--muted)}
+.cohort .note{margin:0}
+.roster{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));column-gap:28px}
+@media (max-width:760px){.roster{grid-template-columns:1fr}}
+@media (max-width:760px){.teams,.projs{grid-template-columns:1fr}.stats b{font-size:1.9rem}}
+@media (prefers-reduced-motion:reduce){.ini{transition:none}}
+.openings{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+.openings li{display:flex;align-items:center;gap:12px;padding:14px 16px;border:1px dashed var(--accent);min-width:0}
+.openings li>div{min-width:0;display:flex;flex-direction:column;line-height:1.3}
+.openings b{font-weight:600;font-size:1rem}
+.openings li>div span{font-size:.85rem;color:var(--muted)}
+.ini.open{font-size:1.3rem;border-style:dashed}
+.cohort-gap{margin-top:18px}
+.headcount{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px}
+.headcount li{background:var(--surface);border:1px solid var(--line);border-top:3px solid var(--fg);padding:16px 18px 18px;display:flex;flex-direction:column;gap:8px;min-width:0}
+.headcount li.total{border-top-color:var(--accent)}
+.headcount b{font-family:var(--display);font-weight:800;font-size:clamp(2.2rem,5vw,3rem);line-height:1;color:var(--accent);font-variant-numeric:tabular-nums}
+.headcount span{font-family:var(--label);font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.count{display:inline-grid;place-items:center;min-width:1.6em;height:1.6em;padding:0 .35em;margin-left:8px;font-size:.62em;font-weight:700;color:var(--surface);background:var(--accent);border-radius:999px;vertical-align:.2em;font-variant-numeric:tabular-nums}
+@media (max-width:760px){.headcount{grid-template-columns:1fr 1fr}}
+@media (max-width:760px){.openings{grid-template-columns:1fr}}
+.courses{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px 40px}
+.courses>div{min-width:0;border-top:2px solid var(--fg);padding-top:12px}
+.courses ul{list-style:none;margin:0;padding:0}
+.courses li{font-family:var(--display);font-weight:500;font-size:1.2rem;line-height:1.3;padding-block:10px;border-bottom:1px solid var(--line)}
+.courses li:last-child{border-bottom:0}
+@media (max-width:520px){.courses{grid-template-columns:1fr}}
+/* collaborations */
+.cur{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+.cur li{position:relative;background:var(--surface);border:1px solid var(--line);padding:0 0 18px;min-width:0;overflow:hidden;transition:transform .25s,border-color .25s}
+.cur li:hover{transform:translateY(-3px);border-color:var(--accent)}
+.cur svg{display:block;width:100%;height:auto;background:var(--bg);border-bottom:1px solid var(--line);padding:10px 12px}
+.cur h3{margin:14px 18px 0;font-size:1.25rem}
+.live{display:inline-flex;align-items:center;gap:7px;margin:14px 18px 0;font-family:var(--label);font-size:.7rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--accent)}
+.live::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--accent);animation:pulse 1.8s ease-out infinite}
+@keyframes pulse{0%{box-shadow:0 0 0 0 color-mix(in srgb,var(--accent) 55%,transparent)}100%{box-shadow:0 0 0 9px transparent}}
+.cm-grid path{stroke:var(--line);stroke-width:1}
+.cm-flow{fill:none;stroke:var(--accent);stroke-width:2;stroke-dasharray:6 6;animation:flow 1.6s linear infinite}
+@keyframes flow{to{stroke-dashoffset:-24}}
+.cm-core{fill:var(--surface);stroke:var(--fg);stroke-width:2}
+.cm-t{font-family:var(--label);font-size:9px;fill:var(--muted)}
+.cm-cell path{fill:none;stroke:var(--fg);stroke-width:1.6;stroke-linejoin:round}
+.cm-cell circle{fill:var(--accent)}
+.cm-base{fill:var(--matrix-a);stroke:var(--fg);stroke-width:1.4}
+.cm-layer{fill:var(--accent);opacity:.85}
+.cm-arrow{fill:none;stroke:var(--fg);stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.open{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}
+.open li{display:flex;flex-direction:column;justify-content:space-between;gap:18px;min-height:118px;padding:16px;border:1px solid var(--line);border-top:3px solid var(--fg);background:var(--surface);font-family:var(--display);font-weight:600;font-size:1.08rem;line-height:1.25;min-width:0;transition:border-color .2s,background .2s}
+.open li:hover{border-top-color:var(--accent)}
+.open li span{font-family:var(--display);font-weight:800;font-size:1.5rem;color:var(--accent);line-height:1;font-variant-numeric:tabular-nums}
+.open li.yours{padding:0;border:1px dashed var(--accent);background:transparent}
+.open li.yours a{display:flex;flex-direction:column;justify-content:space-between;gap:18px;height:100%;padding:16px;text-decoration:none;color:var(--accent)}
+.open li.yours:hover{background:var(--surface)}
+.partners2{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:0;border-top:2px solid var(--fg)}
+.country{padding:18px 18px 8px;border-right:1px solid var(--line);min-width:0}
+.country:last-child{border-right:0}
+.country b{display:block;font-family:var(--display);font-weight:800;font-size:clamp(2.4rem,5vw,3.4rem);line-height:.9;letter-spacing:-.02em;color:var(--accent)}
+.cname{display:block;font-family:var(--label);font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin:8px 0 12px}
+.country ul{list-style:none;margin:0;padding:0}
+.country li{font-family:var(--display);font-weight:500;font-size:1.05rem;line-height:1.3;padding:8px 0;border-top:1px solid var(--line)}
+@media (max-width:860px){.open{grid-template-columns:repeat(2,minmax(0,1fr))}.partners2{grid-template-columns:1fr 1fr}.country:nth-child(2){border-right:0}.country:nth-child(n+3){border-top:1px solid var(--line)}}
+@media (max-width:760px){.cur{grid-template-columns:1fr}}
+@media (max-width:420px){.partners2{grid-template-columns:1fr}.country{border-right:0;border-top:1px solid var(--line)}}
+@media (prefers-reduced-motion:reduce){.cm-flow,.live::before{animation:none}.cur li{transition:none}}
+.bgtex{position:fixed;inset:0;z-index:-1;pointer-events:none;opacity:var(--tex);background-repeat:repeat;background-size:560px 560px;-webkit-mask-image:linear-gradient(180deg,#000,rgba(0,0,0,.35) 70%,#000);mask-image:linear-gradient(180deg,#000,rgba(0,0,0,.35) 70%,#000)}
+.batch-h{display:flex;align-items:center;gap:10px;margin:4px 0 -10px;font-family:var(--label);font-size:.74rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--accent)}
+.batch-h span{display:inline-grid;place-items:center;min-width:1.7em;height:1.7em;padding:0 .4em;border:1px solid currentColor;border-radius:999px;font-size:.68rem;letter-spacing:0}
+.batch-h::after{content:"";flex:1;height:1px;background:var(--line)}
+.members .batch{align-self:flex-start;margin:2px 0 3px;padding:1px 7px;border:1px solid var(--line);border-radius:999px;font-family:var(--label);font-size:.66rem!important;letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
+.ini.pic{object-fit:cover;padding:0;width:56px;height:56px;border-width:2px}
+.members .quote{margin-top:4px;font-style:italic;color:var(--fg)!important;font-size:.86rem!important}
+.members .sup{margin-top:3px;font-family:var(--label);font-size:.78rem!important;font-weight:500;color:var(--accent)!important}
+.nums{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}
+.nums li{background:var(--surface);border:1px solid var(--line);border-top:3px solid var(--accent);padding:16px 16px 14px;display:flex;flex-direction:column;gap:4px;min-width:0}
+.nums b{font-family:var(--display);font-weight:800;font-size:clamp(2.2rem,4.6vw,3rem);line-height:1;color:var(--accent);font-variant-numeric:tabular-nums;letter-spacing:-.02em}
+.nums b i{font-style:normal;font-size:.6em;vertical-align:.45em;margin-left:2px}
+.nums span{font-family:var(--display);font-weight:600;font-size:1rem;line-height:1.25;color:var(--fg);margin-top:6px}
+.nums small{font-size:.78rem;color:var(--muted);line-height:1.35}
+@media (max-width:860px){.nums{grid-template-columns:repeat(2,minmax(0,1fr))}}
+</style>
+</head>
+<body>
+<div class="bgtex" id="bgtex" aria-hidden="true"></div>
+<div class="top"><div class="wrap">
+  <nav aria-label="Main">
+    <a class="mark" href="#home">Jaydeep Saha <span class="lab">MARS Lab</span></a>
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#publications">Publications</a></li>
+      <li><a href="#research">Research</a></li>
+      <li><a href="#teaching">Teaching</a></li>
+      <li><a href="#group">Group Members</a></li>
+      <li><a href="#collaborations">Collaborations</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+</div></div>
+
+<div class="wrap">
+
+<!-- HOME -->
+<main data-page="home">
+  <header class="hero">
+    <div>
+      <p class="eyebrow">Metallurgy &amp; Materials Engineering · COEP Technological University, Pune</p>
+      <p class="labtag">MARS Lab</p>
+      <h1 class="mars-title"><span class="w" style="--i:0"><em>M</em>aterials</span> <span class="w" style="--i:1"><em>A</em>dvancement</span> <span class="w" style="--i:2">&amp;</span> <span class="w" style="--i:3"><em>R</em>esearch</span> <span class="w" style="--i:4">in</span> <span class="w" style="--i:5"><em>S</em>tructures</span> <span class="abbr">(<span style="--i:0">M</span><span style="--i:1">A</span><span style="--i:2">R</span><span style="--i:3">S</span>)</span></h1>
+      <p class="tagline">How processing shapes the grains of an alloy, and what they then can do.</p>
+      <p class="lede">We study Thermo-mechanical Processing, texture and mechanical behaviour of metallic alloys, with a focus on High-Entropy Alloys and Additive Manufacturing.</p>
+      <div class="actions">
+        <a class="btn" href="#research">See our research</a>
+        <a class="btn ghost" href="#group">Join the lab</a>
+      </div>
+    </div>
+    <figure class="map">
+      <canvas id="ebsd" width="160" height="120" role="img" aria-label="Animated simulation of grains nucleating and growing into a deformed matrix, coloured like an EBSD orientation map"></canvas>
+      <figcaption>
+        <span>Simulated recrystallization · IPF colouring</span>
+        <span>X<sub>rex</sub> = <b id="frac">0.00</b> · <button class="replay" id="replay" type="button">replay</button></span>
+      </figcaption>
+    </figure>
+  </header>
+
+  <section>
+    <h2>Research focus</h2>
+    <ul class="grid3 focus">
+      <li><a class="tile" href="#research"><span class="tag">01 · Processing</span><h3>Thermo-mechanical Processing</h3><p>Rolling and annealing routes that control recrystallization, grain size and texture.</p></a></li>
+      <li><a class="tile" href="#research"><span class="tag">02 · Design</span><h3>High-Performance Alloy Design</h3><p>Composition and phase design for strength, ductility and service at high temperature.</p></a></li>
+      <li><a class="tile" href="#research"><span class="tag">03 · Alloys</span><h3>High-Entropy Alloys</h3><p>Cantor-type CoCrFeMnNi, Al-containing variants and 3d transition-metal HEAs.</p></a></li>
+      <li><a class="tile" href="#research"><span class="tag">04 · Manufacturing</span><h3>Additive Manufacturing</h3><p>Microstructure and properties of printed metallic alloys, including tool and maraging steels.</p></a></li>
+      <li><a class="tile" href="#research"><span class="tag">05 · Architecture</span><h3>Lattice Structures</h3><p>Architected metallic lattices for lightweight, stiff and energy-absorbing components.</p></a></li>
+      <li class="more"><span class="tag">Explore</span><h3>More from the lab</h3>
+        <p><a href="#research">Research themes &amp; projects →</a><br><a href="#publications">Publications →</a><br><a href="#group">Group members →</a></p></li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>In pictures</h2>
+    <div>
+      <ul class="gallery">
+        <li><figure>
+          <svg viewBox="0 0 300 190" role="img" aria-label="Rolling schematic: a metal strip passes between two rolls and its equiaxed grains become elongated">
+            <circle class="fill-s st" cx="150" cy="40" r="36"/><circle class="fill-s st" cx="150" cy="150" r="36"/>
+            <circle class="acc-f" cx="150" cy="40" r="4"/><circle class="acc-f" cx="150" cy="150" r="4"/>
+            <path class="st fill-m" d="M12 76 H128 Q150 82 172 86 H288 V104 H172 Q150 108 128 114 H12 Z"/>
+            <g id="grains-in" class="thin"></g><g id="grains-out" class="thin"></g>
+            <path class="acc-s" d="M200 128 H250 M242 122 L250 128 L242 134" fill="none"/>
+            <text x="256" y="132" class="lbl">RD</text>
+          </svg>
+          <figcaption><span class="tag">01</span>Thermo-mechanical Processing<small>Rolling turns equiaxed grains into elongated, textured ones; annealing brings them back.</small></figcaption>
+        </figure></li>
+        <li><figure>
+          <svg viewBox="0 0 300 190" role="img" aria-label="Property map of strength against ductility, with a design target beyond existing alloy classes">
+            <path class="st" d="M36 160 H284 M36 160 V14" fill="none"/>
+            <text x="160" y="182" class="lbl" text-anchor="middle">Ductility →</text>
+            <text x="16" y="88" class="lbl" text-anchor="middle" transform="rotate(-90 16 88)">Strength →</text>
+            <ellipse class="bub" cx="100" cy="118" rx="46" ry="22"/><text x="100" y="122" class="lbl" text-anchor="middle">Steels</text>
+            <ellipse class="bub" cx="160" cy="92" rx="40" ry="20"/><text x="160" y="96" class="lbl" text-anchor="middle">Ni-base</text>
+            <ellipse class="bub" cx="204" cy="112" rx="42" ry="22"/><text x="204" y="116" class="lbl" text-anchor="middle">HEAs</text>
+            <path class="acc-s dash" d="M214 88 L244 50" fill="none"/>
+            <path class="acc-f" d="M252 28 l5 11 12 1 -9 8 3 12 -11 -6 -11 6 3 -12 -9 -8 12 -1 z"/>
+            <text x="248" y="76" class="lbl acc-t" text-anchor="end">target</text>
+          </svg>
+          <figcaption><span class="tag">02</span>High-Performance Alloy Design<small>Pushing the strength–ductility envelope past existing alloy classes.</small></figcaption>
+        </figure></li>
+        <li><figure>
+          <svg viewBox="0 0 300 190" role="img" aria-label="Face-centred cubic lattice with five elements, Co, Cr, Fe, Mn and Ni, randomly sharing the sites">
+            <g id="hea-atoms"></g>
+            <g id="hea-key"></g>
+          </svg>
+          <figcaption><span class="tag">03</span>High-Entropy Alloys<small>Five elements in near-equal amounts sharing one FCC lattice, as in the Cantor alloy.</small></figcaption>
+        </figure></li>
+        <li class="wide"><figure>
+          <svg viewBox="0 0 440 190" role="img" aria-label="Laser powder bed fusion: a laser melts a pool on the top layer of stacked scan tracks">
+            <rect class="fill-s st" x="20" y="150" width="400" height="26"/>
+            <text x="30" y="167" class="lbl">Substrate</text>
+            <g id="am-tracks"></g>
+            <path class="acc-s beam" d="M262 8 L262 86" fill="none"/>
+            <path class="acc-f" d="M252 8 h20 v10 h-20 z"/>
+            <text x="280" y="20" class="lbl">Laser</text>
+            <ellipse class="pool" cx="262" cy="92" rx="22" ry="10"/>
+            <text x="292" y="80" class="lbl acc-t">Melt pool</text>
+            <path class="st" d="M300 60 H360 M352 54 L360 60 L352 66" fill="none"/>
+            <text x="366" y="64" class="lbl">scan</text>
+          </svg>
+          <figcaption><span class="tag">04</span>Additive Manufacturing<small>Parts built layer by layer as a laser melts and re-melts each track.</small></figcaption>
+        </figure></li>
+        <li class="wide"><figure>
+          <svg viewBox="0 0 440 190" role="img" aria-label="Body-centred cubic strut lattice made of repeating unit cells">
+            <g id="lattice"></g>
+          </svg>
+          <figcaption><span class="tag">05</span>Lattice Structures<small>Repeating strut cells that make light, stiff and energy-absorbing parts.</small></figcaption>
+        </figure></li>
+      </ul>
+      <p class="gnote">Schematic illustrations. Micrographs and photos from the lab can replace them.</p>
+    </div>
+  </section>
+</main>
+
+<!-- ABOUT -->
+<main data-page="about" hidden>
+  <header class="page-head">
+    <p class="eyebrow">About</p>
+    <h1>Jaydeep Saha, Ph.D.</h1>
+    <p class="lede">Assistant Professor, Department of Metallurgy and Materials Engineering, COEP Technological University, Pune</p>
+  </header>
+  <section>
+    <h2>Biography</h2>
+    <div class="body">
+      <p>I am an Assistant Professor in the Department of Metallurgy and Materials Engineering at COEP Technological University, Pune, where I lead the Materials Advancement &amp; Research in Structures (MARS) Laboratory. I joined COEP in July 2026.</p>
+      <p>I earned my Ph.D. from the Indian Institute of Technology Hyderabad, working on Thermo-mechanical Processing of High- and Medium-Entropy Alloys. I then held postdoctoral positions at The University of Tokyo, Japan, developing Al- and Nb-alloyed CoCrNi medium-entropy alloys, and at Iowa State University, USA, designing compositionally graded lattice structures for Additive Manufacturing.</p>
+      <p>Before my doctorate I worked on C/SiC ceramic matrix composites at CSIR-National Aerospace Laboratories, Bengaluru, and as a Graduate Engineer Trainee at Bhushan Power &amp; Steel Limited. My work aims to connect laboratory alloy design with scalable industrial processing for the aerospace, automotive, energy and defence sectors.</p>
+      <p>I am a recipient of the Horizon Europe Marie Skłodowska-Curie Actions Postdoctoral Fellowship Seal of Excellence, awarded by the European Commission.</p>
+    </div>
+  </section>
+  <section>
+    <h2>Education</h2>
+    <ul class="list">
+      <li><span class="k">2022</span><div><h3>Ph.D., Materials Science and Metallurgical Engineering</h3><p>Indian Institute of Technology Hyderabad.</p><p class="thesis"><span>Thesis</span>Thermo-Mechanical Processing of High- &amp; Medium-Entropy Alloys: Microstructure &amp; Texture</p></div></li>
+      <li><span class="k">2016</span><div><h3>M.Tech., Metallurgical and Materials Engineering</h3><p>National Institute of Technology, Tiruchirappalli. Gold Medalist, first rank in the department.</p><p class="thesis"><span>Thesis</span>C-fiber reinforced SiC ceramic matrix composites by chemical vapour infiltration</p></div></li>
+      <li><span class="k">2013</span><div><h3>B.E., Metallurgical Engineering</h3><p>Jadavpur University, Kolkata.</p><p class="thesis"><span>Thesis</span>Shielding gas compositions for GMAW joints of 409M ferritic stainless steel</p></div></li>
+    </ul>
+  </section>
+  <section>
+    <h2>Experience</h2>
+    <ul class="list">
+      <li><span class="k">2026 – now</span><div><h3>Assistant Professor</h3><p>COEP Technological University, Pune, India</p></div></li>
+      <li><span class="k">2023 – 2025</span><div><h3>Postdoctoral Research Associate</h3><p>Iowa State University, Ames, Iowa, USA</p><p class="thesis"><span>Research</span>Modelling and simulation of lattice structures for Additive Manufacturing</p></div></li>
+      <li><span class="k">2022 – 2023</span><div><h3>Postdoctoral Project Researcher</h3><p>The University of Tokyo, Kashiwa, Japan</p><p class="thesis"><span>Research</span>Alloy development and process optimisation for structural applications</p></div></li>
+      <li><span class="k">2016 – 2022</span><div><h3>Research Fellow (Ph.D.)</h3><p>Indian Institute of Technology Hyderabad, India</p><p class="thesis"><span>Research</span>Thermo-mechanical processing of high- &amp; medium-entropy alloys: microstructure &amp; texture</p></div></li>
+      <li><span class="k">2015 – 2016</span><div><h3>Project Researcher</h3><p>CSIR-National Aerospace Laboratories, Bengaluru, India</p><p class="thesis"><span>Research</span>C/SiC ceramic matrix composites by chemical vapour infiltration</p></div></li>
+      <li><span class="k">2013 – 2014</span><div><h3>Graduate Engineer Trainee</h3><p>Bhushan Power &amp; Steel Limited, Jharsuguda, Odisha, India</p><p class="thesis">Sinter plant process control</p></div></li>
+    </ul>
+  </section>
+  <section>
+    <h2>Awards &amp; honours</h2>
+    <ul class="list">
+      <li><span class="k">MSCA-PF</span><div><h3>Seal of Excellence, Marie Skłodowska-Curie Actions Postdoctoral Fellowship</h3><p>Horizon Europe, European Commission. Awarded for a proposal scoring above the high-quality threshold.</p></div></li>
+      <li><span class="k">2016</span><div><h3>Gold Medal, M.Tech.</h3><p>NIT Tiruchirappalli, with the Academic Proficiency Prize (2015) and Alumni Award (2015) for first rank in the department.</p></div></li>
+      <li><span class="k">2014</span><div><h3>I T Mirchandani Memorial Award</h3><p>Best Paper, Indian Institute of Welding International Congress (IIW-IC).</p></div></li>
+      <li><span class="k">2014</span><div><h3>GATE, Metallurgical Engineering</h3><p>All-India Rank in the top 10%. MHRD fellowships for M.Tech. and Ph.D.</p></div></li>
+    </ul>
+  </section>
+  <section>
+    <h2>Service</h2>
+    <div class="body">
+      <p class="svc-h"><strong>Reviewer</strong></p>
+      <ul class="svc">
+        <li>Materials Science and Engineering: A</li>
+        <li>Materials &amp; Design</li>
+        <li>Intermetallics</li>
+        <li>Journal of Alloys and Metallurgical Systems</li>
+        <li>Materials Today Communications</li>
+        <li>Journal of Minerals and Materials Characterization and Engineering</li>
+        <li>International Journal of Materials Science and Applications</li>
+      </ul>
+      <p class="svc-h"><strong>Memberships</strong></p>
+      <ul class="svc">
+        <li>Indian Institute of Metals (IIM)</li>
+        <li>Japan Institute of Metals and Materials (JIMM)</li>
+      </ul>
+    </div>
+  </section>
+</main>
+
+<!-- PUBLICATIONS -->
+<main data-page="publications" hidden>
+  <header class="page-head">
+    <p class="eyebrow">Publications</p>
+    <h1>Articles and presentations</h1>
+    <p class="lede">170+ citations. The full, up-to-date list is on <a href="https://scholar.google.com/" target="_blank" rel="noopener">Google Scholar ↗</a></p>
+  </header>
+  <section>
+    <h2>Journal articles</h2>
+    <ol class="pubs" reversed>
+      <li><p class="au"><b class="me">J. Saha</b>, P.V. Cobbinah, T. Hiroto, S. Matsunaga, Y. Toda, Y. Yamabe-Mitarai</p><h3>Evolution of microstructure and texture in Al-containing CoCrNi medium entropy alloys during severe warm-rolling</h3><p class="venue"><em>Materials Characterization</em> 207 (2024) 113546. <a href="https://doi.org/10.1016/j.matchar.2023.113546" target="_blank" rel="noopener">doi:10.1016/j.matchar.2023.113546 ↗</a></p></li>
+      <li><p class="au"><b class="me">J. Saha</b>, R. Saha, P.P. Bhattacharjee</p><h3>Microstructure and texture of severely warm-rolled and annealed coarse-grained CoCrNi medium entropy alloy (MEA): A perspective on the initial grain size effect</h3><p class="venue"><em>Journal of Alloys and Compounds</em> 904 (2022) 163954. <a href="https://doi.org/10.1016/j.jallcom.2022.163954" target="_blank" rel="noopener">doi:10.1016/j.jallcom.2022.163954 ↗</a></p></li>
+      <li><p class="au"><b class="me">J. Saha</b>, R. Saha, P.P. Bhattacharjee</p><h3>Microstructure and texture development in CoCrNi medium entropy alloy processed by severe warm cross-rolling and annealing <span class="status">Popular in Intermetallics</span></h3><p class="venue"><em>Intermetallics</em> 143 (2022) 107463. <a href="https://doi.org/10.1016/j.intermet.2022.107463" target="_blank" rel="noopener">doi:10.1016/j.intermet.2022.107463 ↗</a></p></li>
+      <li><p class="au"><b class="me">J. Saha</b>, R. Saha, S.R.K. Malladi, P.P. Bhattacharjee</p><h3>Microstructure and texture of CoCrNi medium entropy alloy (MEA) processed by severe cryo-rolling: A study vis-a-vis cold-rolling</h3><p class="venue"><em>Intermetallics</em> 138 (2021) 107345. <a href="https://doi.org/10.1016/j.intermet.2021.107345" target="_blank" rel="noopener">doi:10.1016/j.intermet.2021.107345 ↗</a></p></li>
+      <li><p class="au"><b class="me">J. Saha</b>, P.P. Bhattacharjee</p><h3>Influences of Thermomechanical Processing by severe cold and warm rolling on the microstructure, texture, and mechanical properties of an equiatomic CoCrNi medium-entropy alloy</h3><p class="venue"><em>Journal of Materials Engineering and Performance</em> 30 (2021) 8956–8971. <a href="https://doi.org/10.1007/s11665-021-06092-6" target="_blank" rel="noopener">doi:10.1007/s11665-021-06092-6 ↗</a></p></li>
+      <li><p class="au"><b class="me">J. Saha</b>, G. Ummethala, S.R.K. Malladi, P.P. Bhattacharjee</p><h3>Severe warm-rolling mediated microstructure and texture of equiatomic CoCrFeMnNi High-Entropy Alloy: A comparison with cold rolling</h3><p class="venue"><em>Intermetallics</em> 129 (2021) 107029. <a href="https://doi.org/10.1016/j.intermet.2020.107029" target="_blank" rel="noopener">doi:10.1016/j.intermet.2020.107029 ↗</a></p></li>
+      <li><p class="au">M. Mukherjee, <b class="me">J. Saha</b>, P. Kanjilal, T.K. Pal, S. Sisodia</p><h3>Influence of gas mixtures in GMAW of modified 409M ferritic stainless steel</h3><p class="venue"><em>Welding Journal</em> 94 (2015) 101s–114s.</p></li>
+    </ol>
+  </section>
+  <section>
+    <h2>Reviews &amp; manuscripts</h2>
+    <div class="body"><p><span class="status">In progress</span></p></div>
+  </section>
+  <section>
+    <h2>Presentations</h2>
+    <ul class="list">
+      <li><span class="k">2024</span><div><h3>Modeling and designing of compositionally gradient lattice structures</h3><p>Talk, CANFSA 2024, Iowa State University, USA</p></div></li>
+      <li><span class="k">2021</span><div><h3>Understanding the effect of severe warm-rolling on the microstructure and texture of CoCrFeMnNi High-Entropy Alloy</h3><p>EUROMAT 2021, Austria</p></div></li>
+      <li><span class="k">2021</span><div><h3>A comparative perspective of microstructure and texture formation in severely cold and warm-rolled CoCrFeMnNi High-Entropy Alloy</h3><p>NMD-ATM IIM 2020, IIT Bombay</p></div></li>
+    </ul>
+  </section>
+</main>
+
+<!-- RESEARCH -->
+<main data-page="research" hidden>
+  <header class="page-head">
+    <p class="eyebrow">Research</p>
+    <h1>From processing route to properties</h1>
+    <p class="lede">Every theme below asks the same question: how does the way an alloy is made set its grains, its texture, and its behaviour?</p>
+  </header>
+  <section>
+    <h2>At a glance</h2>
+    <ul class="nums" aria-label="Research in numbers">
+      <li><b>170<i>+</i></b><span>Citations</span><small>Google Scholar</small></li>
+      <li><b>7</b><span>h-index</span><small>Google Scholar</small></li>
+      <li><b>7</b><span>Journal articles</span><small>Peer-reviewed</small></li>
+      <li><b>5</b><span>Q1 journal papers</span><small>Intermetallics, J. Alloys Compd., Mater. Charact.</small></li>
+      <li><b>14<i>+</i></b><span>Years in research</span><small>Since 2012</small></li>
+      <li><b>3</b><span>Countries of research</span><small>India · Japan · USA</small></li>
+      <li><b>8</b><span>Partner institutions</span><small>Across 4 countries</small></li>
+      <li><b>7</b><span>Journals reviewed for</span><small>Incl. MSE A, Intermetallics</small></li>
+    </ul>
+  </section>
+  <section>
+    <h2>Themes</h2>
+    <ul class="grid2">
+      <li><span class="tag">Alloy design</span><h3>High-Entropy Alloys</h3><p>Cantor-type CoCrFeMnNi and Al-containing variants, and 3d transition-metal HEAs for high-temperature service.</p></li>
+      <li><span class="tag">Processing</span><h3>Thermo-mechanical Processing</h3><p>Rolling and annealing routes, recrystallization kinetics and grain growth.</p></li>
+      <li><span class="tag">Microstructure</span><h3>Crystallographic texture</h3><p>Texture evolution during deformation and annealing, measured by EBSD and X-ray diffraction.</p></li>
+      <li><span class="tag">Manufacturing</span><h3>Additive Manufacturing</h3><p>Microstructure and properties of printed metallic alloys, including tool and maraging steels.</p></li>
+      <li><span class="tag">Characterization</span><h3>Materials characterization</h3><p>Electron microscopy, diffraction and CALPHAD thermodynamic modelling to explain what we see.</p></li>
+      <li><span class="tag">Properties</span><h3>Mechanical behaviour</h3><p>Linking grain size, texture and phase content to strength, ductility and high-temperature performance.</p></li>
+      <li><span class="tag">Architected materials</span><h3>Mechanical Metamaterials &amp; Lattice Structures</h3><p>Designing and simulating lightweight SC, FCC and BCC lattices, including compositionally graded ones, built by Additive Manufacturing for tailored stiffness and energy absorption.</p></li>
+      <li><span class="tag">Sustainability</span><h3>Sustainable Manufacturing</h3><p>Recycling high-entropy alloys by remelting, reusing metal powders in Additive Manufacturing, and lower-carbon routes to iron and steel.</p></li>
+    </ul>
+  </section>
+  <section>
+    <h2>Current projects</h2>
+    <ul class="list">
+      <li><span class="k">HEA</span><div><h3>Recrystallization in Al-containing CoCrFeMnNi</h3><p>Effect of aluminium content on recrystallization, grain growth kinetics and texture after cold rolling and annealing.</p></div></li>
+      <li><span class="k">HEA</span><div><h3>High-temperature 3d transition-metal HEAs</h3><p>Which non-refractory compositions can hold their strength and resist oxidation at elevated temperature.</p></div></li>
+      <li><span class="k">Metamaterials</span><div><h3>Simulation of Mechanical Metamaterials</h3><p>Finite-element modelling of lightweight, compositionally graded lattice structures to tune stiffness, strength and energy absorption.</p></div></li>
+      <li><span class="k">Metamaterials</span><div><h3>Thermal Metamaterials</h3><p>Engineered structures that guide, concentrate or shield heat flow, designed and tested through simulation.</p></div></li>
+      <li><span class="k">Sustainability</span><div><h3>Sustainable Manufacturing</h3><p>Remelting-driven recycling of the Cantor high-entropy alloy, with its effect on microstructure and properties, and sustainable reuse of metal powders in Additive Manufacturing.</p></div></li>
+      <li><span class="k">Steels</span><div><h3>Advanced and hydrogen-ready steels</h3><p>Pipeline steels for hydrogen service, medium-Mn AHSS, additively manufactured tool and maraging steels, and naval grades.</p></div></li>
+    </ul>
+  </section>
+  <section>
+    <h2>Past research</h2>
+    <ul class="list">
+      <li><span class="k">Iowa State</span><div><h3>Compositionally graded lattice structures</h3><p>Lightweight SC, FCC and BCC lattices designed and simulated under compression in ABAQUS and SolidWorks, and an Ashby-like database of laser parameters for Additive Manufacturing.</p></div></li>
+      <li><span class="k">U. Tokyo</span><div><h3>Al- and Nb-alloyed CoCrNi medium-entropy alloys</h3><p>About 20% higher hardness at 5–10% lower raw-material cost, with warm rolling established as an industrial processing route.</p></div></li>
+      <li><span class="k">IIT Hyderabad</span><div><h3>Processing maps for high- and medium-entropy alloys</h3><p>Cold, cryo and warm rolling of CoCrFeMnNi and CoCrNi to 90% reduction, with microstructure and texture analysed by SEM and EBSD.</p></div></li>
+      <li><span class="k">CSIR-NAL</span><div><h3>C/SiC ceramic matrix composites</h3><p>Chemical vapour infiltration parameters optimised to reduce porosity in parts for extreme environments.</p></div></li>
+    </ul>
+  </section>
+  <section>
+    <h2>Tools</h2>
+    <div class="body">
+      <p><strong>Processing:</strong> cold, cryo and warm rolling; heat treatment; vacuum arc melting; Additive Manufacturing; welding; FIB, PIPS and micro-EDM.</p>
+      <p><strong>Characterization:</strong> SEM, EDS, EBSD, XRD, DSC, Vickers hardness, tensile testing and nanoindentation.</p>
+      <p><strong>Software:</strong> Thermo-Calc, TSL-OIM, ABAQUS, SolidWorks, Origin Pro and Python.</p>
+    </div>
+  </section>
+</main>
+
+<!-- TEACHING -->
+<main data-page="teaching" hidden>
+  <header class="page-head">
+    <p class="eyebrow">Teaching</p>
+    <h1>Courses and supervision</h1>
+    <p class="lede">I teach the thermodynamic, kinetic and processing foundations of metallurgy, and supervise students in their first research projects.</p>
+  </header>
+  <section>
+    <h2>Courses</h2>
+    <div class="courses">
+      <div>
+        <p class="tag">UG</p>
+        <ul>
+          <li>Materials Thermodynamics and Kinetics</li>
+          <li>Fundamentals of Metal Working</li>
+          <li>Surface Treatment Technology</li>
+        </ul>
+      </div>
+      <div>
+        <p class="tag">PG</p>
+        <ul>
+          <li>Thermodynamics of Materials</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+  <section>
+    <h2>Reference texts</h2>
+    <ul class="list">
+      <li><span class="k">Gaskell</span><div><p>Introduction to the Thermodynamics of Materials</p></div></li>
+      <li><span class="k">Ghosh</span><div><p>Textbook of Materials and Metallurgical Thermodynamics</p></div></li>
+      <li><span class="k">Upadhyaya &amp; Dube</span><div><p>Problems in Metallurgical Thermodynamics and Kinetics</p></div></li>
+    </ul>
+  </section>
+  <section>
+    <h2>Supervision</h2>
+    <div class="body">
+      <p>I guide B.Tech., M.Tech. and Ph.D. researchers and have trained students on the rolling mill, SEM, EBSD, EDS, XRD and hardness testing. At COEP I guide B.Tech. projects in alloy processing, characterization and literature reviews.</p>
+      <p>Students curious about a research question in metallurgy or materials, whether or not it fits the themes on this site, are welcome to get in touch and talk it through. I'm also planning several review articles in the coming months, and students who'd like to read deeply, write and publish are welcome to join.</p>
+      <a class="btn ghost" href="#group">Meet the group</a>
+    </div>
+  </section>
+  <section>
+    <h2>Roles</h2>
+    <ul class="list">
+      <li><span class="k">Advisor</span><div><h3>Faculty Advisor</h3><p>Second-year undergraduates, Metallurgy and Materials Engineering</p></div></li>
+      <li><span class="k">Projects</span><div><h3>Mini-Project Coordinator</h3><p>Third-year undergraduates, Metallurgy and Materials Engineering</p></div></li>
+      <li><span class="k">Lectures</span><div><h3>Expert Lecture Series Coordinator</h3><p>Department of Metallurgy and Materials Engineering</p></div></li>
+    </ul>
+  </section>
+  <section>
+    <h2>Can also teach</h2>
+    <div class="body"><p>Materials Science and Engineering, Physical Metallurgy (fundamentals and advanced), Metal Forming Processes, Thermo-mechanical Processing, High-Entropy Alloys, Heat Treatment and Metallography.</p></div>
+  </section>
+</main>
+
+<!-- GROUP -->
+<main data-page="group" hidden>
+  <header class="page-head">
+    <p class="eyebrow">Group Members · MARS Lab</p>
+    <h1>The people of the MARS Lab</h1>
+    <p class="lede">The Materials Advancement &amp; Research in Structures (MARS) Laboratory is a small group of undergraduate and postgraduate researchers working on alloys, processing and characterization.</p>
+  </header>
+  <section>
+    <h2>Principal investigator</h2>
+    <div class="pi">
+      <img class="avatar photo" src="pi.jpg" width="480" height="480" alt="Portrait of Jaydeep Saha">
+      <div>
+        <p class="role">Assistant Professor · Head, MARS Lab · MME, COEP Tech</p>
+        <h3>Jaydeep Saha</h3>
+        <p style="margin:0;color:var(--muted);font-size:1rem">Ph.D., IIT Hyderabad. Former postdoctoral researcher at The University of Tokyo and Iowa State University. High-Entropy Alloys, Thermo-mechanical Processing, Additive Manufacturing and lattice structures.</p>
+      </div>
+    </div>
+  </section>
+  <section>
+    <h2>Current students</h2>
+    <div class="cohort">
+      <ul class="headcount" aria-label="Group size">
+        <li><b>3</b><span>M.Tech. students</span></li>
+        <li><b>12</b><span>B.Tech. students</span></li>
+        <li><b>3</b><span>Other research</span></li>
+        <li class="total"><b>18</b><span>Students in the lab</span></li>
+      </ul>
+      <p class="note"><strong>Interns:</strong> positions open. See <a href="#contact">Contact</a> or “Join the group” below.</p>
+      <div class="cohort-head">
+        <div>
+          <h3>M.Tech. students <span class="count">3</span></h3>
+        </div>
+      </div>
+
+      <p class="batch-h">Batch 2027 <span>1</span></p>
+      <ul class="members roster">
+            <li><span class="ini" aria-hidden="true">CH</span><div><b>Changadeo Govind Hajare</b><span class="batch">Batch 2027</span><span>Project: Modeling of Compositionally Graded Simple Cubic Lattice Structures</span><span class="sup">Co-supervisor: Dr. Abhishek Pandey</span></div></li>
+      </ul>
+      <p class="batch-h">Batch 2028 <span>2</span></p>
+      <ul class="members roster">
+            <li><img class="ini pic" src="riyanshu.jpg" width="240" height="240" alt="Photo of Riyanshu Deepak Rawal"><div><b>Riyanshu Deepak Rawal</b><span class="batch">Batch 2028</span><span>Project: Modelling and Simulation of Lightweight Compositionally Graded Mechanical Metamaterials or Lattice Structures</span><span class="sup">Co-supervisor: Dr. Abhishek Pandey</span><span class="quote">“Fascinated by how microstructures shape the macro world!”</span></div></li>
+            <li><span class="ini" aria-hidden="true">MH</span><div><b>Mitali Paramanand Hurdale</b><span class="batch">Batch 2028</span><span>Project: Modelling and Simulation of Lightweight Compositionally Graded Mechanical Metamaterials or Lattice Structures</span><span class="sup">Co-supervisor: Dr. Abhishek Pandey</span></div></li>
+      </ul>
+
+      <div class="cohort-head cohort-gap">
+        <div>
+          <h3>B.Tech. students <span class="count">12</span></h3>
+        </div>
+      </div>
+
+      <p class="batch-h">Batch 2027 <span>4</span></p>
+      <ul class="members roster">
+            <li><span class="ini" aria-hidden="true">RK</span><div><b>Rohit Kulkarni</b><span class="batch">Batch 2027</span><span>Project: Remelting driven recycling study of Cantor high entropy alloy: Microstructure and Property Analysis</span><span class="sup">Supervisor: Dr. Vinit K. Kanade · Co-supervisor: Dr. Jaydeep Saha</span></div></li>
+            <li><span class="ini" aria-hidden="true">GT</span><div><b>Gayatri Thakur</b><span class="batch">Batch 2027</span><span>Project: Remelting driven recycling study of Cantor high entropy alloy: Microstructure and Property Analysis</span><span class="sup">Supervisor: Dr. Vinit K. Kanade · Co-supervisor: Dr. Jaydeep Saha</span></div></li>
+            <li><span class="ini" aria-hidden="true">PD</span><div><b>Prerana Darekar</b><span class="batch">Batch 2027</span><span>Project: Remelting driven recycling study of Cantor high entropy alloy: Microstructure and Property Analysis</span><span class="sup">Supervisor: Dr. Vinit K. Kanade · Co-supervisor: Dr. Jaydeep Saha</span></div></li>
+            <li><span class="ini" aria-hidden="true">ON</span><div><b>Omkar Nikam</b><span class="batch">Batch 2027</span><span>Project: Remelting driven recycling study of Cantor high entropy alloy: Microstructure and Property Analysis</span><span class="sup">Supervisor: Dr. Vinit K. Kanade · Co-supervisor: Dr. Jaydeep Saha</span></div></li>
+      </ul>
+      <p class="batch-h">Batch 2028 <span>8</span></p>
+      <ul class="members roster">
+            <li><img class="ini pic" src="aditya.jpg" width="240" height="240" alt="Photo of Aditya Dhopavkar"><div><b>Aditya Dhopavkar</b><span class="batch">Batch 2028</span><span>Project: Evolution of Recrystallization Behaviour of High-Entropy Alloys</span><span class="quote">“Exploring materials science to understand, innovate, and engineer a better future”</span></div></li>
+            <li><span class="ini" aria-hidden="true">DV</span><div><b>Devansh Vaid</b><span class="batch">Batch 2028</span><span>Project: Evolution of Recrystallization Behaviour of High-Entropy Alloys</span></div></li>
+            <li><span class="ini" aria-hidden="true">HR</span><div><b>Hansh Ramchandani</b><span class="batch">Batch 2028</span><span>Project: Evolution of Recrystallization Behaviour of High-Entropy Alloys</span></div></li>
+            <li><img class="ini pic" src="devyani.jpg" width="240" height="240" alt="Photo of Devyani Farsole"><div><b>Devyani Farsole</b><span class="batch">Batch 2028</span><span>Project: Evolution of Recrystallization Behaviour of High-Entropy Alloys</span><span class="quote">“Understanding materials at their core, transforming possibilities into engineering realities.”</span></div></li>
+            <li><span class="ini" aria-hidden="true">AD</span><div><b>Aniruddha Dhokney</b><span class="batch">Batch 2028</span><span>Project: Evolution of Recrystallization Behaviour of High-Entropy Alloys</span></div></li>
+            <li><span class="ini" aria-hidden="true">PD</span><div><b>Pranav Dandavate</b><span class="batch">Batch 2028</span><span>Project: Evolution of Recrystallization Behaviour of High-Entropy Alloys</span></div></li>
+            <li><span class="ini" aria-hidden="true">DD</span><div><b>Dhruv Daribe</b><span class="batch">Batch 2028</span><span>Project: Evolution of Recrystallization Behaviour of High-Entropy Alloys</span></div></li>
+            <li><span class="ini" aria-hidden="true">CK</span><div><b>Chaitanya Kulkarni</b><span class="batch">Batch 2028</span><span>Project: Evolution of Recrystallization Behaviour of High-Entropy Alloys</span></div></li>
+      </ul>
+
+      <div class="cohort-head cohort-gap">
+        <div>
+          <h3>Other research <span class="count">3</span></h3>
+        </div>
+      </div>
+
+      <p class="batch-h">Batch 2027 <span>2</span></p>
+      <ul class="members roster">
+            <li><span class="ini" aria-hidden="true">GD</span><div><b>Gauri Dangarikar</b><span class="batch">B.Tech. · Batch 2027</span><span>Topic: Surface Treatment Processes and Technology</span><span class="sup">Supervisor: Dr. Manasi Mulay · Co-supervisor: Dr. Jaydeep Saha</span></div></li>
+            <li><span class="ini" aria-hidden="true">VK</span><div><b>Vehaan Kusalkar</b><span class="batch">B.Tech. · Batch 2027</span><span>Topic: Surface Treatment Processes and Technology</span><span class="sup">Supervisor: Dr. Manasi Mulay · Co-supervisor: Dr. Jaydeep Saha</span></div></li>
+      </ul>
+      <p class="batch-h">Batch 2028 <span>1</span></p>
+      <ul class="members roster">
+            <li><span class="ini" aria-hidden="true">MK</span><div><b>Mihir Khangar</b><span class="batch">B.Tech. · Batch 2028</span><span>Topic: Surface Treatment Processes and Technology</span><span class="sup">Supervisor: Dr. Manasi Mulay · Co-supervisor: Dr. Jaydeep Saha</span></div></li>
+      </ul>
+
+    </div>
+  </section>
+  <section>
+    <h2>Join the group</h2>
+    <div class="body">
+      <p>Students at COEP interested in a BTech project, MTech thesis or PhD on alloy processing, High-Entropy Alloys, advanced steels, other advanced materials (additively manufactured alloys, lattice structures), characterization or related projects are welcome to write. Include a short note on your interests and your CV.</p>
+      <a class="btn ghost" href="#contact">Contact details</a>
+    </div>
+  </section>
+</main>
+
+<!-- COLLABORATIONS -->
+<main data-page="collaborations" hidden>
+  <header class="page-head">
+    <p class="eyebrow">Collaborations</p>
+    <h1>Better science, built together</h1>
+    <p class="lede">Ongoing projects, open doors, and partner institutions across four countries.</p>
+  </header>
+
+  <section>
+    <h2>Current collaborations</h2>
+    <ul class="cur">
+      <li>
+        <svg viewBox="0 0 160 96" aria-hidden="true">
+          <g class="cm-grid"><path d="M10 20 H150 M10 48 H150 M10 76 H150"/></g>
+          <path class="cm-flow" d="M6 30 C50 30 56 48 80 48 C104 48 110 30 154 30"/>
+          <path class="cm-flow" d="M6 48 C50 48 56 48 80 48 C104 48 110 48 154 48"/>
+          <path class="cm-flow" d="M6 66 C50 66 56 48 80 48 C104 48 110 66 154 66"/>
+          <circle class="cm-core" cx="80" cy="48" r="12"/>
+          <text x="10" y="92" class="cm-t">hot</text><text x="150" y="92" class="cm-t" text-anchor="end">cold</text>
+        </svg>
+        <span class="live">Ongoing</span>
+        <h3>Thermal Metamaterials</h3>
+      </li>
+      <li>
+        <svg viewBox="0 0 160 96" aria-hidden="true">
+          <g class="cm-cell" id="auxetic"></g>
+        </svg>
+        <span class="live">Ongoing</span>
+        <h3>Mechanical Metamaterials</h3>
+      </li>
+      <li>
+        <svg viewBox="0 0 160 96" aria-hidden="true">
+          <rect class="cm-base" x="14" y="54" width="132" height="34"/>
+          <rect class="cm-layer" x="14" y="44" width="132" height="10"/>
+          <path class="cm-arrow" d="M44 8 V36 M38 30 L44 38 L50 30 M80 8 V36 M74 30 L80 38 L86 30 M116 8 V36 M110 30 L116 38 L122 30"/>
+        </svg>
+        <span class="live">Ongoing</span>
+        <h3>Surface Treatment and Processing</h3>
+      </li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Open to collaborate</h2>
+    <div>
+      <ol class="open">
+        <li><span>01</span>High-Entropy Alloys</li>
+        <li><span>02</span>Thermo-mechanical Processing</li>
+        <li><span>03</span>Advanced Materials and Processing</li>
+        <li><span>04</span>Additive Manufacturing</li>
+        <li><span>05</span>Steel Technology</li>
+        <li><span>06</span>Modelling and Simulation</li>
+        <li><span>07</span>Sustainable Manufacturing</li>
+        <li class="yours"><a href="#contact"><span>+</span>Your idea? Let’s talk</a></li>
+      </ol>
+    </div>
+  </section>
+
+  <section>
+    <h2>Academic partners</h2>
+    <div class="partners2">
+      <div class="country"><b>IN</b><span class="cname">India</span><ul><li>COEP Technological University</li><li>IIT Hyderabad</li><li>CSIR-National Aerospace Laboratories</li><li>CSIR-Central Mechanical Engineering Research Institute</li><li>Jadavpur University</li></ul></div>
+      <div class="country"><b>JP</b><span class="cname">Japan</span><ul><li>The University of Tokyo</li></ul></div>
+      <div class="country"><b>US</b><span class="cname">USA</span><ul><li>Iowa State University</li></ul></div>
+      <div class="country"><b>IE</b><span class="cname">Ireland</span><ul><li>University of Limerick</li></ul></div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Start a conversation</h2>
+    <div class="body">
+      <p>Academic or industry partner with an idea that overlaps ours? Write with a short note and let’s explore it together.</p>
+      <a class="btn" href="#contact">Get in touch</a>
+    </div>
+  </section>
+</main>
+
+<!-- CONTACT -->
+<main data-page="contact" hidden>
+  <header class="page-head">
+    <p class="eyebrow">Contact</p>
+    <h1>Get in touch</h1>
+    <p class="lede">For research collaboration, student projects or teaching queries, email is the best way to reach me.</p>
+  </header>
+  <section>
+    <h2>Email</h2>
+    <div class="emails">
+      <div class="contact">
+        <span class="etag">Official</span>
+        <span class="addr">sahaj.meta@coeptech.ac.in</span>
+        <button class="copy" type="button">Copy email</button>
+      </div>
+      <div class="contact">
+        <span class="etag">Personal</span>
+        <span class="addr">jaydpsaha90@gmail.com</span>
+        <button class="copy" type="button">Copy email</button>
+      </div>
+    </div>
+  </section>
+  <section>
+    <h2>Address</h2>
+    <div class="body"><p>Materials Advancement &amp; Research in Structures (MARS) Lab<br>Department of Metallurgy and Materials Engineering<br>COEP Technological University<br>Wellesley Road, Shivajinagar, Pune 411005<br>Maharashtra, India</p></div>
+  </section>
+  <section>
+    <h2>Profiles</h2>
+    <div class="links">
+      <a href="https://scholar.google.com/" target="_blank" rel="noopener">Google Scholar ↗</a>
+      <a href="https://orcid.org/" target="_blank" rel="noopener">ORCID ↗</a>
+      <a href="https://www.researchgate.net/" target="_blank" rel="noopener">ResearchGate ↗</a>
+      <a href="https://www.linkedin.com/" target="_blank" rel="noopener">LinkedIn ↗</a>
+      <a href="https://www.coeptech.ac.in/" target="_blank" rel="noopener">COEP Tech ↗</a>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <span>© 2026 Jaydeep Saha · MARS Lab · MME, COEP Technological University</span>
+  <span>Home map: Johnson–Mehl–Avrami style nucleation and growth, 160 × 120 px</span>
+</footer>
+</div>
+
+<script>
+(function(){
+  /* ---------- routing ---------- */
+  const pages=[...document.querySelectorAll('main[data-page]')];
+  const links=[...document.querySelectorAll('nav ul a')];
+  const names=pages.map(p=>p.dataset.page);
+  function show(){
+    let h=location.hash.replace('#','');
+    if(!names.includes(h))h='home';
+    pages.forEach(p=>p.hidden=p.dataset.page!==h);
+    links.forEach(a=>a.getAttribute('href')==='#'+h?a.setAttribute('aria-current','page'):a.removeAttribute('aria-current'));
+    window.scrollTo(0,0);
+    if(h==='home')play();
+  }
+  addEventListener('hashchange',show);
+
+  /* ---------- recrystallization map ---------- */
+  const cv=document.getElementById('ebsd'),ctx=cv.getContext('2d');
+  const W=cv.width,H=cv.height,N=W*H;
+  const fracEl=document.getElementById('frac');
+  const reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
+  let grain,tmin,cols,noise,tEnd=0,tNow=0,raf;
+  function ipf(){let a=Math.random(),b=Math.random(),c=Math.random();const m=Math.max(a,b,c);a/=m;b/=m;c/=m;return[Math.round(40+a*215),Math.round(40+b*215),Math.round(40+c*215)]}
+  function build(){
+    const n=46,seeds=[];
+    for(let i=0;i<n;i++)seeds.push({x:Math.random()*W,y:Math.random()*H,t:i<18?Math.random()*6:6+Math.random()*40});
+    cols=seeds.map(ipf);grain=new Int16Array(N);tmin=new Float32Array(N);noise=new Uint8Array(N);tEnd=0;
+    for(let y=0;y<H;y++)for(let x=0;x<W;x++){
+      let best=1e9,bi=0;
+      for(let i=0;i<n;i++){const s=seeds[i],t=s.t+Math.hypot(x-s.x,y-s.y)*1.1;if(t<best){best=t;bi=i}}
+      const k=y*W+x;grain[k]=bi;tmin[k]=best;noise[k]=Math.random()<.5?0:1;if(best>tEnd)tEnd=best;
+    }
+  }
+  function rgb(h){h=h.trim().replace('#','');if(h.length===3)h=h.split('').map(c=>c+c).join('');const v=parseInt(h,16);return[(v>>16)&255,(v>>8)&255,v&255]}
+  function draw(t){
+    tNow=t;
+    const cs=getComputedStyle(document.documentElement),ma=rgb(cs.getPropertyValue('--matrix-a')),mb=rgb(cs.getPropertyValue('--matrix-b'));
+    const img=ctx.createImageData(W,H),d=img.data;let rex=0;
+    for(let y=0;y<H;y++)for(let x=0;x<W;x++){
+      const k=y*W+x,o=k*4;let c;
+      if(tmin[k]<=t){rex++;c=cols[grain[k]];const r=x<W-1?k+1:k,b=y<H-1?k+W:k;
+        if((grain[r]!==grain[k]&&tmin[r]<=t)||(grain[b]!==grain[k]&&tmin[b]<=t))c=[20,20,24];}
+      else c=noise[k]?ma:mb;
+      d[o]=c[0];d[o+1]=c[1];d[o+2]=c[2];d[o+3]=255;
+    }
+    ctx.putImageData(img,0,0);fracEl.textContent=(rex/N).toFixed(2);
+  }
+  function play(){
+    cancelAnimationFrame(raf);build();
+    if(reduce){draw(tEnd);return}
+    const start=performance.now(),dur=5200;
+    (function step(now){const p=Math.min(1,(now-start)/dur);draw(p*tEnd);if(p<1)raf=requestAnimationFrame(step)})(start);
+  }
+  document.getElementById('replay').addEventListener('click',play);
+  matchMedia('(prefers-color-scheme: dark)').addEventListener('change',()=>{if(grain)draw(tNow)});
+
+  /* ---------- copy email ---------- */
+  document.querySelectorAll('.contact .copy').forEach(btn=>{
+    const em=btn.parentElement.querySelector('.addr');
+    btn.addEventListener('click',()=>{
+      const sel=()=>{const r=document.createRange();r.selectNodeContents(em);const s=getSelection();s.removeAllRanges();s.addRange(r);btn.textContent='Selected, press Ctrl+C'};
+      const done=()=>{btn.textContent='Copied';setTimeout(()=>btn.textContent='Copy email',1600)};
+      try{navigator.clipboard.writeText(em.textContent).then(done).catch(sel)}catch(e){sel()}
+    });
+  });
+
+  /* ---------- research illustrations ---------- */
+  const NS='http://www.w3.org/2000/svg';
+  function el(parent,tag,attrs){const e=document.createElementNS(NS,tag);for(const k in attrs)e.setAttribute(k,attrs[k]);parent.appendChild(e);return e}
+  // rolling: equiaxed grains before, elongated after
+  (function(){
+    const gi=document.getElementById('grains-in'),go=document.getElementById('grains-out');
+    for(let x=24;x<124;x+=13)el(gi,'path',{d:`M${x} 77 L${x+3} 95 L${x-1} 113`});
+    el(gi,'path',{d:'M14 95 H124'});
+    for(let x=182;x<288;x+=30)el(go,'path',{d:`M${x} 87 L${x+2} 103`});
+    el(go,'path',{d:'M172 95 H288'});
+  })();
+  // HEA: FCC (100) face with random species
+  (function(){
+    const g=document.getElementById('hea-atoms'),key=document.getElementById('hea-key');
+    const sp=[['Co','#3f7cc4'],['Cr','#7a8791'],['Fe','#c1513a'],['Mn','#8b5fb0'],['Ni','#3d9a6c']];
+    let seed=7;const rnd=()=>(seed=(seed*9301+49297)%233280)/233280;
+    const x0=34,y0=22,s=34;
+    for(let r=0;r<5;r++)for(let c=0;c<6;c++){
+      el(g,'circle',{cx:x0+c*s,cy:y0+r*s,r:9,fill:sp[Math.floor(rnd()*5)][1]});
+      if(r<4&&c<5)el(g,'circle',{cx:x0+c*s+s/2,cy:y0+r*s+s/2,r:9,fill:sp[Math.floor(rnd()*5)][1]});
+    }
+    sp.forEach((p,i)=>{el(key,'circle',{cx:250,cy:30+i*28,r:7,fill:p[1]});const t=el(key,'text',{x:262,y:34+i*28,class:'lbl'});t.textContent=p[0]});
+  })();
+  // AM: stacked scan tracks
+  (function(){
+    const g=document.getElementById('am-tracks');
+    for(let l=0;l<4;l++){const y=150-l*14,off=l%2?11:0;
+      for(let x=26+off;x<410;x+=22){if(l===3&&x>250)break;el(g,'path',{class:'track',d:`M${x} ${y} Q${x+11} ${y-20} ${x+22} ${y} Z`})}}
+    const t=el(g,'text',{x:30,y:108,class:'lbl'});t.textContent='Layer n';
+  })();
+  // lattice: BCC strut cells in oblique projection
+  (function(){
+    const g=document.getElementById('lattice');
+    const a=66,dx=30,dy=-24,nodes=new Map();
+    function cell(ox,oy){
+      const c=[[0,0,0],[1,0,0],[1,1,0],[0,1,0],[0,0,1],[1,0,1],[1,1,1],[0,1,1]].map(([x,y,z])=>[ox+x*a+z*dx,oy-y*a+z*dy]);
+      const ctr=[ox+a/2+dx/2,oy-a/2+dy/2];
+      [[4,5],[5,6],[6,7],[7,4],[0,4],[1,5],[2,6],[3,7]].forEach(([i,j])=>el(g,'path',{class:'strut back',d:`M${c[i]} L${c[j]}`}));
+      [0,1,2,3,4,5,6,7].forEach(i=>el(g,'path',{class:'strut',d:`M${c[i]} L${ctr}`}));
+      [[0,1],[1,2],[2,3],[3,0]].forEach(([i,j])=>el(g,'path',{class:'strut',d:`M${c[i]} L${c[j]}`}));
+      c.concat([ctr]).forEach(p=>nodes.set(p.join(),p));
+    }
+    for(let r=0;r<2;r++)for(let i=0;i<5;i++)cell(40+i*a,166-r*a);
+    nodes.forEach(p=>el(g,'circle',{class:'node',cx:p[0],cy:p[1],r:3}));
+  })();
+
+  // auxetic (re-entrant) honeycomb for mechanical metamaterials
+  (function(){
+    const g=document.getElementById('auxetic');if(!g)return;
+    const w=28,h=26,d=7;
+    for(let r=0;r<3;r++)for(let c=0;c<5;c++){
+      const x=12+c*w,y=8+r*h*1.02;
+      el(g,'path',{d:`M${x} ${y} L${x+w} ${y} L${x+w-d} ${y+h/2} L${x+w} ${y+h} L${x} ${y+h} L${x+d} ${y+h/2} Z`});
+      el(g,'circle',{cx:x,cy:y,r:2.2});
+    }
+  })();
+
+  /* ---------- background: faint tileable grain-boundary texture ---------- */
+  (function(){
+    const host=document.getElementById('bgtex');if(!host)return;
+    const T=560,n=34;let s=11;const r=()=>(s=(s*9301+49297)%233280)/233280;
+    const P=[];for(let i=0;i<n;i++)P.push([r()*T,r()*T]);
+    const id=new Int16Array(T*T);
+    for(let y=0;y<T;y++)for(let x=0;x<T;x++){let b=1e12,bi=0;
+      for(let i=0;i<n;i++){let dx=Math.abs(x-P[i][0]),dy=Math.abs(y-P[i][1]);if(dx>T/2)dx=T-dx;if(dy>T/2)dy=T-dy;const d=dx*dx+dy*dy;if(d<b){b=d;bi=i}}
+      id[y*T+x]=bi}
+    function paint(){
+      const cs=getComputedStyle(document.documentElement);
+      const hex=v=>{v=v.trim().replace('#','');if(v.length===3)v=v.split('').map(c=>c+c).join('');const n=parseInt(v,16);return[(n>>16)&255,(n>>8)&255,n&255]};
+      const fg=hex(cs.getPropertyValue('--fg')),ac=hex(cs.getPropertyValue('--accent'));
+      const c=document.createElement('canvas');c.width=T;c.height=T;const x2=c.getContext('2d');
+      const im=x2.createImageData(T,T),d=im.data;
+      for(let y=0;y<T;y++)for(let x=0;x<T;x++){const k=y*T+x,a=id[k],rt=id[y*T+(x+1)%T],dn=id[((y+1)%T)*T+x];
+        if(a!==rt||a!==dn){const o=k*4;d[o]=fg[0];d[o+1]=fg[1];d[o+2]=fg[2];d[o+3]=26}}
+      x2.putImageData(im,0,0);
+      x2.fillStyle=`rgba(${ac[0]},${ac[1]},${ac[2]},.28)`;
+      P.forEach((p,i)=>{if(i%4===0){x2.beginPath();x2.arc(p[0],p[1],1.6,0,6.3);x2.fill()}});
+      host.style.backgroundImage=`url(${c.toDataURL('image/png')})`;
+    }
+    paint();
+    matchMedia('(prefers-color-scheme: dark)').addEventListener('change',paint);
+    new MutationObserver(paint).observe(document.documentElement,{attributes:true,attributeFilter:['data-theme']});
+  })();
+
+  show();
+})();
+</script>
+</body>
+</html>
